@@ -1,0 +1,24 @@
+{
+  "name": "wzv-waalwijk",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "start": "NODE_ENV=development yarn watch | bundle exec jekyll serve --livereload --incremental",
+    "build": "NODE_ENV=production yarn production | bundle exec jekyll build",
+    "watch": "NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "production": "NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.1.0",
+    "babel-preset-env": "^1.7.0",
+    "laravel-mix": "^5.0.5",
+    "vue-template-compiler": "^2.6.12",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12"
+  },
+  "dependencies": {
+    "@tailwindcss/typography": "^0.2.0",
+    "tailwindcss": "^1.8.10"
+  }
+}

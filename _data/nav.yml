@@ -1,0 +1,12 @@
+main:
+  - title: Aanbod
+    url: /aanbod
+
+  - title: Agenda
+    url: /agenda
+
+  - title: Blog
+    url: /blog
+
+  - title: Contact
+    url: contact

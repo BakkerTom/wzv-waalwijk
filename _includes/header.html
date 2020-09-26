@@ -1,0 +1,27 @@
+<div class="absolute w-full">
+  <div class="container mx-auto py-4 px-8 sm:rounded-b-lg bg-white">
+      <div class="flex justify-between items-center">
+          <a href="/" class="flex">
+              <img class="h-8 w-auto sm:h-10 fill-current text-blue-600" src="{{site.url}}{{site.baseurl}}/assets/img/logo.svg" alt="WZV">
+          </a>
+
+          <button class="sm:hidden text-gray-700">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+          </button>
+
+          <div class="items-center hidden sm:flex">
+              <ul class="flex mr-8">
+                  {% for item in site.data.nav.main %}
+                      <li class="mr-2">
+                          <a class="p-4 hover:bg-gray-200 hover:text-gray-700 rounded-lg font-semibold text-gray-800 transition duration-150" href="{{ item.url }}">{{ item.title }}</a>
+                      </li>
+                  {% endfor %}
+              </ul>
+              <a href="#" class="bg-brand text-white py-4 px-6 pr-4 rounded-lg tracking-wide font-semibold uppercase flex items-center transform hover:scale-110 transition duration-150">
+                  <span class="mr-2">Aanmelden</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </a>
+          </div>
+      </div>
+  </div>
+</div>

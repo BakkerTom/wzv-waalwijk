@@ -1,0 +1,108 @@
+---
+layout: default
+---
+
+<div class="h-64 bg-secondary flex justify-center items-center" style="background-image: url('{{ site.url }}{{ site.baseUrl }}/assets/img/{{ page.hero.image }}'); background-position: 45% 50%; background-size: cover; height: 640px;">
+  <div class="mt-16 flex flex-col items-center px-8 sm:px-0">
+      <h2 class="text-4xl tracking-tight leading-10 text-center font-extrabold text-white sm:text-5xl sm:leading-none md:text-6xl">{{ page.hero.title }}</h2>
+      <p class="text-xl md:text-2xl text-gray-200 text-center mt-3 max-w-2xl">
+          {{ page.hero.subtitle }}
+      </p>
+      <div class="mt-8">
+          <a href="{{ page.hero.cta.url }}" class="border-2 border-white text-white py-4 px-6 pr-4 rounded-lg tracking-wide font-semibold uppercase flex items-center transition duration-150 transform hover:scale-105">
+              <span class="mr-2">{{ page.hero.cta.title }}</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </a>
+      </div>
+  </div>
+</div>
+
+<div class="container mx-auto px-4 mt-24">
+    <div class="flex flex-col justify-center items-center">
+        <h3 class="text-4xl tracking-tight leading-10 text-center font-extrabold text-gray-900 sm:text-5xl sm:leading-none md:text-6xl">
+            {{ page.featured.title }}
+        </h3>
+        <p class="text-lg md:text-2xl text-gray-600 text-center mt-3">{{ page.featured.subtitle }}</p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8 lg:gap-16 mx-auto md:px-16 mt-16 md:mt-24">
+        {% for classname in page.featured.classes %}
+        {% assign class = site.classes | where: "slug", classname | first %}
+
+            <a href="{{ class.url }}" class="flex">
+                <div class="rounded-lg overflow-hidden bg-white shadow-md sm:shadow-lg sm:hover:shadow-xl group">
+                    <div class="relative">
+                        <img src="/assets/img/classes/{{ class.image }}" />
+                        <div class="transition duration-150 opacity-0 group-hover:opacity-100 bg-black bg-opacity-25 absolute inset-0 p-4">
+                            <div class="flex w-full h-full justify-center items-center">
+                                <div class="p-4 bg-white text-gray-600 hover:text-primary shadow-sm rounded-lg font-semibold uppercase tracking-wide transform hover:scale-105 transition duration-150 flex pr-2">
+                                    <span>Lees meer</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='p-6'>
+                        <h4 class="text-2xl font-bold text-gray-900 mb-2">{{ class.title }}</h4>
+                        <p class="text-gray-600 text-lg">{{ class.short_description }}</p>
+                    </div>
+                </div>
+            </a>
+
+        {% endfor %}
+    </div>
+
+    <div class="mt-16 flex justify-end sm:justify-center">
+        <a href="{{ page.featured.cta.url }}" class="border-2 border-gray-400 text-gray-500 py-4 px-6 pr-4 rounded-lg tracking-wide font-semibold uppercase flex items-center transition duration-150 transform hover:scale-105">
+            <span class="mr-2">{{ page.featured.cta.title }}</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </a>
+    </div>
+</div>
+
+
+<div class="container mx-auto flex justify-center mt-32 px-4">
+    <div class="bg-purple-700 w-full p-16 rounded-lg flex flex-col lg:flex-row items-center justify-between">
+        <div class="mb-8 lg:mb-0 text-center lg:text-left lg:mr-8">
+            <h2 class="text-4xl font-bold text-white">{{ page.newsletter.title }}</h2>
+            <p class="text-2xl text-purple-200">{{ page.newsletter.subtitle }}</h2>
+        </div>
+
+        <form>
+            <div class="flex">
+                <input type="email" placeholder="E-mailadres" class="h-16 p-4 rounded-lg mr-4 w-full" />
+                <button type="submit" class="h-16 px-8 bg-purple-600 hover:bg-purple-500 rounded-lg text-white font-semibold">{{ page.newsletter.submit }}</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<div class="container mx-auto px-4 mt-32">
+    <div class="flex flex-col justify-center items-center">
+        <h3 class="text-4xl tracking-tight leading-10 text-center font-extrabold text-gray-900 sm:text-5xl sm:leading-none md:text-6xl">{{ page.blog.title }}</h3>
+        <p class="text-lg md:text-2xl text-gray-600 text-center mt-3">{{ page.blog.subtitle }}</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-8 mt-16 md:mt-24">
+        {% for post in site.posts %}
+            <a href="{{ post.url }}" class="flex">
+                <div class="bg-white rounded-lg shadow-md flex overflow-hidden">
+                    <!-- <div class="w-48 flex-none bg-secondary"></div> -->
+                    <div class="p-8">
+                        <span class="text-sm uppercase tracking-wide text-gray-600 rounded mb-2">{{ post.date | date: "%d %B %Y" }}</span>
+                        <h4 class="text-2xl font-bold mb-2 leading-tight">{{ post.title }}</h4>
+                        <p class="text-lg text-gray-700">{{ post.excerpt }}</p>
+                        <span href="{{ post.url }}" class="font-semibold text-secondary text-lg mt-4">Lees meer</span>
+                    </div>
+                </div>
+            </a>
+        {% endfor %}
+    </div>
+    <div class="mt-16 flex justify-end sm:justify-center">
+        <a href="{{ page.blog.cta.url }}" class="border-2 border-gray-400 text-gray-500 py-4 px-6 pr-4 rounded-lg tracking-wide font-semibold uppercase flex items-center transition duration-150 transform hover:scale-105">
+            <span class="mr-2">{{ page.blog.cta.title }}</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </a>
+    </div>
+</div>
