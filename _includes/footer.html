@@ -1,0 +1,59 @@
+<footer id="footer" class="bg-white mt-16 py-8">
+  <div class="container mx-auto px-4 flex flex-col space-y-8 md:space-y-0 md:flex-row justify-between">
+    <div class="flex flex-col items-center md:items-start md:w-1/3">
+      <a href="/" class="flex mb-4">
+        <img class="h-8 w-auto fill-current text-blue-600" src="{{site.url}}{{site.baseurl}}/assets/img/logo.svg" alt="WZV">
+      </a>
+      <p class="text-lg text-gray-700 mb-2 text-center md:text-left">
+        Zwembad Olympia<br>
+        Drunenseweg 11<br>
+        5143 NE, Waalwijk<br>
+      </p>
+      <p class="text-lg text-gray-700 text-center md:text-left">
+        info@wzvwaalwijk.nl<br>
+        0416-123456
+      </p>
+      <div class="flex mt-4 text-gray-500 space-x-2">
+        <a href="#" class="hover:text-gray-800 duration-150 transition">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+        </a>
+        <a href="#" class="hover:text-gray-800 duration-150 transition">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="md:max-w-sm">
+      <h4 class="text-xl text-center font-semibold mb-4">Nog geen lid van onze vereniging? Meld je aan voor <span class="text-brand">gratis proeflessen</span></h4>
+      <form>
+        <div class="flex flex-col mb-4">
+          <label for="name" class="text-md mb-2 text-gray-700 font-semibold">Naam</label>
+          <input type="text" name="name" class="bg-gray-200 h-12 rounded-lg px-4 font-semibold"/>
+        </div>
+        <div class="flex flex-col mb-4">
+          <label for="email" class="text-md mb-2 text-gray-700 font-semibold">Email *</label>
+          <input type="email" name="email" class="bg-gray-200 h-12 rounded-lg px-4 font-semibold"/>
+        </div>
+        <div class="flex flex-col mb-6">
+          <label for="message" class="text-md mb-2 text-gray-700 font-semibold">Vertel iets over jezelf...</label>
+          <textarea type="text" name="message" class="bg-gray-200 h-24 rounded-lg p-4 font-semibold"></textarea>
+        </div>
+        <button type="submit" class="h-12 rounded-lg bg-brand font-bold text-white w-full">Versturen</button>
+      </form>
+    </div>
+
+    <div class="md:w-1/3 text-center md:text-right">
+      <h3 class="text-xl font-semibold mb-4">Menu</h3>
+      <ul class="text-lg space-y-2 text-gray-700">
+        {% for item in site.data.nav.footer %}
+          <li>
+            <a href="{{ item.url }}">{{ item.title}}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+  <div class='container mx-auto px-4 text-sm text-gray-500 mt-8'>
+    © WZV Waalwijk 2020
+  </div>
+</footer>

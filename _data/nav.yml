@@ -9,4 +9,24 @@ main:
     url: /blog
 
   - title: Contact
-    url: contact
+    url: /contact
+
+footer:
+  - title: Home
+    url: /
+
+  - title: Aanbod
+    url: /aanbod
+
+  - title: Agenda
+    url: /agenda
+
+  - title: Blog
+    url: /blog
+
+  - title: Contact
+    url: /contact
+
+  - title: FAQ
+    url: /faq
+

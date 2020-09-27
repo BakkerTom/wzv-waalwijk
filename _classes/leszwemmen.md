@@ -1,6 +1,6 @@
 ---
 title: Leszwemmen
-layout: page
+layout: class
 short_description: Spelenderwijs leren kinderen zwemmen met de SuperSpetters-methode
 image: leszwemmen.jpg
 ---

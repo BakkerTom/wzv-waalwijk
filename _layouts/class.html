@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+<div class="bg-secondary pt-16 md:pt-24 mb-16">
+  <div class="container mx-auto px-4 py-16 md:py-32 flex justify-center items-center">
+    <h1 class="text-4xl tracking-tight leading-10 text-center font-extrabold text-white sm:text-5xl sm:leading-none md:text-6xl">{{ page.title }}</h1>
+  </div>
+</div>
+
+<div class="max-w-3xl mx-auto px-4">
+  <img src="/assets/img/classes/{{page.image}}"  class="w-full mb-8"/>
+  <div class="mx-auto prose lg:prose-xl">
+    {{ content }}
+  </div>
+
+  <div class="text-lg sm:text-xl color-gray-800 mt-8">
+    {% for training in page.schedule %}
+      <div class="border-b py-6">
+        <span class="inline-block w-64">{{ training.day }}</span>
+        <span>{{ training.start }} – {{ training.end }}</span>
+      </div>
+    {% endfor %}
+  </div>
+</div>
