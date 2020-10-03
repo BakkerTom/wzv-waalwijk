@@ -2,24 +2,41 @@
 layout: default
 ---
 
-<div class="bg-secondary pt-16 md:pt-24 mb-16">
+<div class="bg-secondary pt-16 md:pt-24 mb-8 md:mb-16">
   <div class="container mx-auto px-4 py-16 md:py-32 flex justify-center items-center">
     <h1 class="text-4xl tracking-tight leading-10 text-center font-extrabold text-white sm:text-5xl sm:leading-none md:text-6xl">{{ page.title }}</h1>
   </div>
 </div>
 
-<div class="max-w-3xl mx-auto px-4">
-  <img src="/assets/img/classes/{{page.image}}"  class="w-full mb-8"/>
-  <div class="mx-auto prose lg:prose-xl">
-    {{ content }}
+<div class="container mx-auto px-4 lg:px-0">
+  <div class="lg:flex lg:-mx-8">
+    <div class="lg:w-3/5 lg:px-8">
+      <img src="/assets/img/classes/{{page.image}}"  class="w-full mb-8"/>
+      <div class="prose lg:prose-xl">
+        {{ content }}
+      </div>
+    </div>
+    <div class="lg:w-2/5 lg:px-8 mt-16 lg:mt-0">
+      <div class="text-md sm:text-xl color-gray-800">
+        <h2 class="font-bold text-xl sm:text-2xl text-white mb-1 px-6 py-4 bg-gray-800">Trainingstijden</h2>
+        {% for training in page.schedule %}
+          <div class="bg-gray-200 mb-1 flex">
+            <div class="w-1/2 p-6 font-semibold">
+              {{ training.day }}
+            </div>
+            <div class="w-1/2 p-6 text-right text-gray-600">
+              {{ training.start }} – {{ training.end }}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+      <div class="mt-8">
+        <a href="#" class="flex justify-center items-center bg-brand text-white font-semibold text-center text-lg sm:text-xl p-6 rounded-lg transform hover:scale-105 transition-transform duration-150">
+          <span>Aanmelden</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 ml-2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </a>
+      </div>
+    </div>
   </div>
 
-  <div class="text-lg sm:text-xl color-gray-800 mt-8">
-    {% for training in page.schedule %}
-      <div class="border-b py-6">
-        <span class="inline-block w-64">{{ training.day }}</span>
-        <span>{{ training.start }} – {{ training.end }}</span>
-      </div>
-    {% endfor %}
-  </div>
 </div>
