@@ -1,8 +1,10 @@
 ---
+title: 27/9 Minioren Circuit Den Bosch
+date: 2020-09-27 11:27:51 Z
+categories:
+- wedstrijdzwemmen
+- minioren
 layout: post
-title:  "27/9 Minioren Circuit Den Bosch"
-date:   2020-09-27 13:27:51 +0200
-categories: wedstrijdzwemmen minioren
 ---
 
 De Minioren Circuit wedstrijd in het 25m bad (Sportiom) van Den Bosch was een wedstrijd van eerste keren. Suze van Oosterhout, Elin Snoeren en Isis Folkertsma zwommen hun eerste officiële wedstrijd. En Collin van der Ham en Nora Aourzag zwommen voor de eerste keer een 400 meter vrije slag. Daarnaast was het voor deze zwemmers van WZV de eerste wedstrijd van het nieuwe seizoen.

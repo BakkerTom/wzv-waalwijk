@@ -3,21 +3,20 @@ title: Leszwemmen
 layout: class
 short_description: Spelenderwijs leren kinderen zwemmen met de SuperSpetters-methode
 image: leszwemmen.jpg
-
 schedule:
-  - day: Woensdag
-    start: '19:15'
-    end: '20:00'
-  - start: '20:00'
-    end: '21:00'
-  - day: Vrijdag
-    start: '19:00'
-    end: '20:30'
-  - start: '20:30'
-    end: '22:00'
-  - day: Zondag
-    start: '08:45'
-    end: '09:45'
+- day: Woensdag
+  start: '19:15'
+  end: '20:00'
+- start: '20:00'
+  end: '21:00'
+- day: Vrijdag
+  start: '19:00'
+  end: '20:30'
+- start: '20:30'
+  end: '22:00'
+- day: Zondag
+  start: '08:45'
+  end: '09:45'
 ---
 
 WZV geeft zwemles aan kinderen vanaf 5 jaar. Er wordt gewerkt volgens het landelijke zwemlesmethode SuperSpetters. De lesgroepen bestaan uit maximaal 8 kinderen die begeleid worden door enthousiaste zweminstructeurs. Elke les duurt een half uur en de zwemlessen worden twee maal per week gegeven.
