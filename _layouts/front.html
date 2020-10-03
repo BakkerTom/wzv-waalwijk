@@ -17,7 +17,7 @@ layout: default
   </div>
 </div>
 
-<div class="container mx-auto px-4 mt-24">
+<div class="container mx-auto px-4 mt-16 md:mt-24">
     <div class="flex flex-col justify-center items-center">
         <h3 class="text-4xl tracking-tight leading-10 text-center font-extrabold text-gray-900 sm:text-5xl sm:leading-none md:text-6xl">
             {{ page.featured.title }}
@@ -52,7 +52,7 @@ layout: default
         {% endfor %}
     </div>
 
-    <div class="mt-16 flex justify-end sm:justify-center">
+    <div class="mt-16 flex justify-center">
         <a href="{{ page.featured.cta.url }}" class="border-2 border-gray-400 text-gray-500 py-4 px-6 pr-4 rounded-lg tracking-wide font-semibold uppercase flex items-center transition duration-150 transform hover:scale-105">
             <span class="mr-2">{{ page.featured.cta.title }}</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><polyline points="9 18 15 12 9 6"></polyline></svg>
@@ -61,16 +61,16 @@ layout: default
 </div>
 
 
-<div class="container mx-auto flex justify-center mt-32 px-4">
-    <div class="bg-purple-700 w-full p-16 rounded-lg flex flex-col lg:flex-row items-center justify-between">
+<div class="container mx-auto flex justify-center mt-16 sm:mt-32 sm:px-4">
+    <div class="bg-purple-700 w-full p-8 sm:p-16 sm:rounded-lg flex flex-col lg:flex-row items-center justify-between">
         <div class="mb-8 lg:mb-0 text-center lg:text-left lg:mr-8">
             <h2 class="text-4xl font-bold text-white">{{ page.newsletter.title }}</h2>
             <p class="text-2xl text-purple-200">{{ page.newsletter.subtitle }}</h2>
         </div>
 
-        <form>
-            <div class="flex">
-                <input type="email" placeholder="E-mailadres" class="h-16 p-4 rounded-lg mr-4 w-full" />
+        <form class="w-full md:w-auto">
+            <div class="flex flex-col md:flex-row justify-center md:justify-start">
+                <input type="email" placeholder="E-mailadres" class="h-16 p-4 rounded-lg mr-4 w-full mb-4 md:mb-0" />
                 <button type="submit" class="h-16 px-8 bg-purple-600 hover:bg-purple-500 rounded-lg text-white font-semibold">{{ page.newsletter.submit }}</button>
             </div>
         </form>
@@ -78,7 +78,7 @@ layout: default
 </div>
 
 
-<div class="container mx-auto px-4 mt-32">
+<div class="container mx-auto px-4 mt-16 md:mt-32">
     <div class="flex flex-col justify-center items-center">
         <h3 class="text-4xl tracking-tight leading-10 text-center font-extrabold text-gray-900 sm:text-5xl sm:leading-none md:text-6xl">{{ page.blog.title }}</h3>
         <p class="text-lg md:text-2xl text-gray-600 text-center mt-3">{{ page.blog.subtitle }}</p>
@@ -99,7 +99,7 @@ layout: default
             </a>
         {% endfor %}
     </div>
-    <div class="mt-16 flex justify-end sm:justify-center">
+    <div class="mt-16 flex justify-center">
         <a href="{{ page.blog.cta.url }}" class="border-2 border-gray-400 text-gray-500 py-4 px-6 pr-4 rounded-lg tracking-wide font-semibold uppercase flex items-center transition duration-150 transform hover:scale-105">
             <span class="mr-2">{{ page.blog.cta.title }}</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><polyline points="9 18 15 12 9 6"></polyline></svg>
