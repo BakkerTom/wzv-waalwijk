@@ -2,7 +2,7 @@
 title: Aquajogging
 layout: class
 short_description: Hard en nat! Wedstrijdzwemmen op hoog niveau voor alle leeftijden
-image: leszwemmen.jpg
+image: /assets/img/classes/leszwemmen.jpg
 schedule:
 - day: Woensdag
   start: '19:15'

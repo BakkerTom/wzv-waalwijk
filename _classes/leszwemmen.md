@@ -2,7 +2,7 @@
 title: Leszwemmen
 layout: class
 short_description: Spelenderwijs leren kinderen zwemmen met de SuperSpetters-methode
-image: leszwemmen.jpg
+image: /assets/img/classes/leszwemmen.jpg
 schedule:
 - day: Woensdag
   start: '19:15'
